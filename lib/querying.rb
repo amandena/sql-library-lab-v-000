@@ -26,6 +26,7 @@ def select_series_title_with_most_human_characters
   JOIN characters
   ON series.id = characters.id
   GROUP BY(characters.species = 'human')
+  ORDER BY(characters.species)
   HAVING MAX(characters.species);"
 end
 
